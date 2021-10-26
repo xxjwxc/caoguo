@@ -1,0 +1,34 @@
+NAME := caoguo
+
+BUILDSHELLFILE :=`ls ../apidoc/proto/$(NAME)/*.proto | cut -d'/' -f5`
+COMMSHELLFILE :=`ls ../apidoc/proto/common/*.proto | cut -d'/' -f5`
+ 
+gen_proto: gen_build gen_base
+clean_proto:
+	rm -f rpc/common/*.pb.go
+gen_build:# 自定义注册
+	@mkdir -p rpc/$(NAME)
+	@echo "gen_build proto"
+	@rm -f rpc/$(NAME)/*.pb.go
+	@rm -f rpc/$(NAME)/*.pb.gmsec.go
+	@for file in $(BUILDSHELLFILE); do \
+	 echo build $$file; \
+	 protoc --proto_path="../apidoc/proto/" --gmsec_out=plugins=gmsec:./ $(NAME)/$$file; \
+	done;
+	@sed -i 's/,omitempty//g' ./rpc/$(NAME)/*.pb.go #开始取消json omitempty
+	cp -rf ./rpc/$(NAME)/ ../rpc/ #子目录向父目录拷贝
+	@sed -i 's#common "rpc/common"#common "$(NAME)/rpc/common"#g' ./rpc/$(NAME)/*.go #开始替换common包
+ 
+gen_base:# 基础库
+	@mkdir -p ../rpc/common
+	@echo "gen proto"
+	@rm -f rpc/common/*.pb.go
+	@rm -f rpc/common/*.pb.gmsec.go
+	@for file in $(COMMSHELLFILE); do \
+	 echo base $$file; \
+	 protoc --proto_path="../apidoc/proto/" --gmsec_out=plugins=gmsec:../ common/$$file; \
+	done;
+	@sed -i 's/,omitempty//g' ../rpc/common/*.pb.go #开始取消json omitempty
+	cp -rf ../rpc/common/ ./rpc/ #父目录向当前目录拷贝
+	
+

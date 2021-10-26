@@ -1,0 +1,2914 @@
+{
+     "swagger": "2.0",
+     "info": {
+          "description": "swagger default desc",
+          "version": "1.0.0",
+          "title": "Swagger Petstore"
+     },
+     "host": "localhost:9001/",
+     "basePath": "/caoguo",
+     "tags": [
+          {
+               "name": "Coupon",
+               "description": ""
+          },
+          {
+               "name": "Dist",
+               "description": ""
+          },
+          {
+               "name": "Login",
+               "description": ""
+          },
+          {
+               "name": "Order",
+               "description": ""
+          },
+          {
+               "name": "Product",
+               "description": ""
+          },
+          {
+               "name": "Upload",
+               "description": ""
+          },
+          {
+               "name": "User",
+               "description": ""
+          },
+          {
+               "name": "Weixin",
+               "description": ""
+          }
+     ],
+     "schemes": [
+          "http"
+     ],
+     "paths": {
+          "/commcn/api/v1/coupon.get_admin_coupon_info": {
+               "post": {
+                    "tags": [
+                         "Coupon"
+                    ],
+                    "summary": "admin 获取优惠券列表",
+                    "description": "admin 获取优惠券列表",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "admin 获取优惠券列表",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/Empty"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/commcn/api/v1/coupon.get_my_coupon": {
+               "post": {
+                    "tags": [
+                         "Coupon"
+                    ],
+                    "summary": "获取我的优惠券",
+                    "description": "获取我的优惠券",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "获取我的优惠券",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/Empty"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/commcn/api/v1/coupon.get_promotion_coupon": {
+               "post": {
+                    "tags": [
+                         "Coupon"
+                    ],
+                    "summary": "获取促销优惠券",
+                    "description": "获取促销优惠券",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "获取促销优惠券",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/Empty"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/commcn/api/v1/coupon.go_get_coupon": {
+               "post": {
+                    "tags": [
+                         "Coupon"
+                    ],
+                    "summary": "一键领取优惠券",
+                    "description": "一键领取优惠券",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "一键领取优惠券",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/Empty"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/commcn/api/v1/coupon.upset_admin_coupon_info": {
+               "post": {
+                    "tags": [
+                         "Coupon"
+                    ],
+                    "summary": "admin 更新/添加 优惠券列表",
+                    "description": "admin 更新/添加 优惠券列表",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "admin 更新/添加 优惠券列表",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/Empty"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/commcn/api/v1/dist.get_dist_list": {
+               "post": {
+                    "tags": [
+                         "Dist"
+                    ],
+                    "summary": "获取可分销列表",
+                    "description": "获取可分销列表",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "获取可分销列表",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/Empty"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/commcn/api/v1/dist.request_dist": {
+               "post": {
+                    "tags": [
+                         "Dist"
+                    ],
+                    "summary": "申请分销",
+                    "description": "申请分销",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "申请分销",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/Empty"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/commcn/api/v1/login.refresh_token": {
+               "post": {
+                    "tags": [
+                         "Login"
+                    ],
+                    "summary": "刷新token管理员",
+                    "description": "刷新token管理员",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "刷新token管理员",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/Empty"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/commcn/api/v1/login/login": {
+               "post": {
+                    "tags": [
+                         "Login"
+                    ],
+                    "summary": "登录",
+                    "description": "登录",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "登录",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/Empty"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/commcn/api/v1/order.add_bill_shipment": {
+               "post": {
+                    "tags": [
+                         "Order"
+                    ],
+                    "summary": "订单添加运单号",
+                    "description": "订单添加运单号",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "订单添加运单号",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/Empty"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/commcn/api/v1/order.check_pay": {
+               "post": {
+                    "tags": [
+                         "Order"
+                    ],
+                    "summary": "支付成功check一次",
+                    "description": "支付成功check一次",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "支付成功check一次",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/Empty"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/commcn/api/v1/order.deal_order": {
+               "post": {
+                    "tags": [
+                         "Order"
+                    ],
+                    "summary": "账单/订单处理",
+                    "description": "账单/订单处理",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "账单/订单处理",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/Empty"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/commcn/api/v1/order.deal_system": {
+               "post": {
+                    "tags": [
+                         "Order"
+                    ],
+                    "summary": "意见与反馈",
+                    "description": "意见与反馈",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "意见与反馈",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/Empty"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/commcn/api/v1/order.get_after_msg": {
+               "post": {
+                    "tags": [
+                         "Order"
+                    ],
+                    "summary": "获取回复信息",
+                    "description": "获取回复信息",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "获取回复信息",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/Empty"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/commcn/api/v1/order.get_bill_info_by_admin": {
+               "post": {
+                    "tags": [
+                         "Order"
+                    ],
+                    "summary": "获取订单信息",
+                    "description": "获取订单信息",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "获取订单信息",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/Empty"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/commcn/api/v1/order.get_my_orders": {
+               "post": {
+                    "tags": [
+                         "Order"
+                    ],
+                    "summary": "获取所有订单",
+                    "description": "获取所有订单",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "获取所有订单",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/Empty"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/commcn/api/v1/order.get_my_orders_config": {
+               "post": {
+                    "tags": [
+                         "Order"
+                    ],
+                    "summary": "获取订单配置",
+                    "description": "获取订单配置",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "获取订单配置",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/Empty"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/commcn/api/v1/order.get_ordertrack_info": {
+               "post": {
+                    "tags": [
+                         "Order"
+                    ],
+                    "summary": "获取物流轨迹信息",
+                    "description": "获取物流轨迹信息",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "获取物流轨迹信息",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/Empty"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/commcn/api/v1/order.get_shipment_post": {
+               "post": {
+                    "tags": [
+                         "Order"
+                    ],
+                    "summary": "获取快递列表",
+                    "description": "获取快递列表",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "获取快递列表",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/Empty"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/commcn/api/v1/order.pay": {
+               "post": {
+                    "tags": [
+                         "Order"
+                    ],
+                    "summary": "支付",
+                    "description": "支付",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "支付",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/Empty"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/commcn/api/v1/order.place_order": {
+               "post": {
+                    "tags": [
+                         "Order"
+                    ],
+                    "summary": "下单",
+                    "description": "下单",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "下单",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/Empty"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/commcn/api/v1/order.reckon_fee": {
+               "post": {
+                    "tags": [
+                         "Order"
+                    ],
+                    "summary": "费用计算",
+                    "description": "费用计算",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "费用计算",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/Empty"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/commcn/api/v1/product.add_address": {
+               "post": {
+                    "tags": [
+                         "Product"
+                    ],
+                    "summary": "添加或者修改地址",
+                    "description": "添加或者修改地址",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "添加或者修改地址",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/Empty"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/commcn/api/v1/product.add_to_buy_tmp_cart": {
+               "post": {
+                    "tags": [
+                         "Product"
+                    ],
+                    "summary": "添加到直接购买虚拟购物车里面",
+                    "description": "添加到直接购买虚拟购物车里面",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "添加到直接购买虚拟购物车里面",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/Empty"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/commcn/api/v1/product.add_to_cart": {
+               "post": {
+                    "tags": [
+                         "Product"
+                    ],
+                    "summary": "加入购物车",
+                    "description": "加入购物车",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "加入购物车",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/Empty"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/commcn/api/v1/product.change_cart": {
+               "post": {
+                    "tags": [
+                         "Product"
+                    ],
+                    "summary": "改变",
+                    "description": "改变",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "改变",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/Empty"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/commcn/api/v1/product.favorite": {
+               "post": {
+                    "tags": [
+                         "Product"
+                    ],
+                    "summary": "收藏 or 取消收藏",
+                    "description": "收藏 or 取消收藏",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "收藏 or 取消收藏",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/Empty"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/commcn/api/v1/product.get_ad_info": {
+               "post": {
+                    "tags": [
+                         "Product"
+                    ],
+                    "summary": "获取广告主信息列表(可能更新)",
+                    "description": "获取广告主信息列表(可能更新)",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "获取广告主信息列表(可能更新)",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/Empty"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/commcn/api/v1/product.get_address": {
+               "post": {
+                    "tags": [
+                         "Product"
+                    ],
+                    "summary": "获取地址",
+                    "description": "获取地址",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "获取地址",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/Empty"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/commcn/api/v1/product.get_admin_ad_info": {
+               "post": {
+                    "tags": [
+                         "Product"
+                    ],
+                    "summary": "admin 获取首页信息(轮播图广告，类型广告，主销广告,精选列表)",
+                    "description": "admin 获取首页信息(轮播图广告，类型广告，主销广告,精选列表)",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "admin 获取首页信息(轮播图广告，类型广告，主销广告,精选列表)",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/Empty"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/commcn/api/v1/product.get_boutique_group": {
+               "post": {
+                    "tags": [
+                         "Product"
+                    ],
+                    "summary": "获取团购列表",
+                    "description": "获取团购列表",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "获取团购列表",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/Empty"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/commcn/api/v1/product.get_cart_list": {
+               "post": {
+                    "tags": [
+                         "Product"
+                    ],
+                    "summary": "获取购物车内容",
+                    "description": "获取购物车内容",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "获取购物车内容",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/Empty"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/commcn/api/v1/product.get_favorite": {
+               "post": {
+                    "tags": [
+                         "Product"
+                    ],
+                    "summary": "获取收藏列表",
+                    "description": "获取收藏列表",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "获取收藏列表",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/Empty"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/commcn/api/v1/product.get_product_by_type": {
+               "post": {
+                    "tags": [
+                         "Product"
+                    ],
+                    "summary": "通过商品类型获取商品列表",
+                    "description": "通过商品类型获取商品列表",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "通过商品类型获取商品列表",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/Empty"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/commcn/api/v1/product.get_product_details": {
+               "post": {
+                    "tags": [
+                         "Product"
+                    ],
+                    "summary": "获取订单详情",
+                    "description": "获取订单详情",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "获取订单详情",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/Empty"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/commcn/api/v1/product.get_product_list": {
+               "post": {
+                    "tags": [
+                         "Product"
+                    ],
+                    "summary": "admin 获取商品列表",
+                    "description": "admin 获取商品列表",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "admin 获取商品列表",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/Empty"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/commcn/api/v1/product.replace_product": {
+               "post": {
+                    "tags": [
+                         "Product"
+                    ],
+                    "summary": "添加一个产品(可能更新)",
+                    "description": "添加一个产品(可能更新)",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "添加一个产品(可能更新)",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/Empty"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/commcn/api/v1/product.replace_sku": {
+               "post": {
+                    "tags": [
+                         "Product"
+                    ],
+                    "summary": "添加一个产品Sku(可能更新)",
+                    "description": "添加一个产品Sku(可能更新)",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "添加一个产品Sku(可能更新)",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/Empty"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/commcn/api/v1/product.update_select": {
+               "post": {
+                    "tags": [
+                         "Product"
+                    ],
+                    "summary": "修改商品推荐信息",
+                    "description": "修改商品推荐信息",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "修改商品推荐信息",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/Empty"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/commcn/api/v1/product.upset_admin_ad_info": {
+               "post": {
+                    "tags": [
+                         "Product"
+                    ],
+                    "summary": "admin 更新首页信息(轮播图广告，类型广告，主销广告,精选列表)(id为0,添加，id\u003e0 删除)",
+                    "description": "admin 更新首页信息(轮播图广告，类型广告，主销广告,精选列表)(id为0,添加，id\u003e0 删除)",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "admin 更新首页信息(轮播图广告，类型广告，主销广告,精选列表)(id为0,添加，id\u003e0 删除)",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/Empty"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/commcn/api/v1/product.upset_sku_price": {
+               "post": {
+                    "tags": [
+                         "Product"
+                    ],
+                    "summary": "更新/设置产品sku价格",
+                    "description": "更新/设置产品sku价格",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "更新/设置产品sku价格",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/Empty"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/commcn/api/v1/upload": {
+               "post": {
+                    "tags": [
+                         "Upload"
+                    ],
+                    "summary": "上传文件 多个",
+                    "description": "上传文件 多个",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "上传文件 多个",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/Empty"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/commcn/api/v1/user.get_user_info": {
+               "post": {
+                    "tags": [
+                         "User"
+                    ],
+                    "summary": "获取用户相关信息",
+                    "description": "获取用户相关信息",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "获取用户相关信息",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/Empty"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/commcn/api/v1/user.link_user": {
+               "post": {
+                    "tags": [
+                         "User"
+                    ],
+                    "summary": "关联用户",
+                    "description": "关联用户",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "关联用户",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/Empty"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/commcn/api/v1/user.request_vip": {
+               "post": {
+                    "tags": [
+                         "User"
+                    ],
+                    "summary": "申请vip",
+                    "description": "申请vip",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "申请vip",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/Empty"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/commcn/api/v1/weixin.get_qrcode": {
+               "post": {
+                    "tags": [
+                         "Weixin"
+                    ],
+                    "summary": "获取微信二维码",
+                    "description": "获取微信二维码",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "获取微信二维码",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/Empty"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/commcn/api/v1/weixin.oauth": {
+               "post": {
+                    "tags": [
+                         "Weixin"
+                    ],
+                    "summary": "微信授权获取登录信息",
+                    "description": "微信授权获取登录信息",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "微信授权获取登录信息",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/Empty"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/commcn/api/v1/weixin.refund_pay": {
+               "post": {
+                    "tags": [
+                         "Weixin"
+                    ],
+                    "summary": "退款",
+                    "description": "退款",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "退款",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/Empty"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          },
+          "/commcn/api/v1/weixin.update_user_info": {
+               "post": {
+                    "tags": [
+                         "Weixin"
+                    ],
+                    "summary": "更新用户信息",
+                    "description": "更新用户信息",
+                    "consumes": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "produces": [
+                         "application/json",
+                         "application/xml"
+                    ],
+                    "parameters": [
+                         {
+                              "in": "body",
+                              "name": "body",
+                              "description": "更新用户信息",
+                              "required": true,
+                              "schema": {
+                                   "$ref": "#/definitions/Empty"
+                              }
+                         }
+                    ],
+                    "responses": {
+                         "400": {
+                              "description": "v"
+                         },
+                         "404": {
+                              "description": "not found"
+                         },
+                         "405": {
+                              "description": "Validation exception"
+                         }
+                    }
+               }
+          }
+     },
+     "securityDefinitions": {},
+     "definitions": {
+          "AddAddressReq": {
+               "type": "object",
+               "properties": {
+                    "addr": {
+                         "format": "",
+                         "description": "",
+                         "$ref": "#/definitions/AddressInfo"
+                    },
+                    "op": {
+                         "type": "integer",
+                         "format": "int32",
+                         "description": "1:添加，2:修改，3:删除"
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "AddBillShipmentReq": {
+               "type": "object",
+               "properties": {
+                    "billId": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "订单号"
+                    },
+                    "postKey": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "快递id"
+                    },
+                    "shipmentId": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "快递单号"
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "AddCartReq": {
+               "type": "object",
+               "properties": {
+                    "gpid": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "商品id"
+                    },
+                    "number": {
+                         "type": "integer",
+                         "format": "int32",
+                         "description": "数量"
+                    },
+                    "skuList": {
+                         "type": "object",
+                         "format": "array",
+                         "description": "sku信息"
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "AddReq": {
+               "type": "object",
+               "properties": {
+                    "contexts": {
+                         "format": "",
+                         "description": "",
+                         "$ref": "#/definitions/PContext"
+                    },
+                    "icon": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "商品图标"
+                    },
+                    "imgs": {
+                         "type": "object",
+                         "format": "array",
+                         "description": "轮播图(图片，或者视频都可以)"
+                    },
+                    "name": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "商品名"
+                    },
+                    "price": {
+                         "type": "integer",
+                         "format": "int64",
+                         "description": "商品价格(分)"
+                    },
+                    "qty": {
+                         "type": "integer",
+                         "format": "int64",
+                         "description": "商品数量"
+                    },
+                    "type": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "商品类型"
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "AddSkuReq": {
+               "type": "object",
+               "properties": {
+                    "gpid": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "商品gpid"
+                    },
+                    "skus": {
+                         "format": "",
+                         "description": "",
+                         "$ref": "#/definitions/SkuInfo"
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "AddToBuyTmpCartReq": {
+               "type": "object",
+               "properties": {
+                    "gpid": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "商品id"
+                    },
+                    "number": {
+                         "type": "integer",
+                         "format": "int32",
+                         "description": "数量(目前默认为1)"
+                    },
+                    "skuList": {
+                         "type": "object",
+                         "format": "array",
+                         "description": "sku信息"
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "AddressInfo": {
+               "type": "object",
+               "properties": {
+                    "address": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "详细地址"
+                    },
+                    "addressName": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "地址名称"
+                    },
+                    "area": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "单元门牌号"
+                    },
+                    "default": {
+                         "type": "boolean",
+                         "format": "bool",
+                         "description": "是否默认"
+                    },
+                    "id": {
+                         "type": "integer",
+                         "format": "int64",
+                         "description": ""
+                    },
+                    "mobile": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "手机号"
+                    },
+                    "name": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "名字"
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "AdminAdGroupInfo": {
+               "type": "object",
+               "properties": {
+                    "id": {
+                         "type": "integer",
+                         "format": "int64",
+                         "description": "id(id\u003e0:修改，id=0:添加)"
+                    },
+                    "mainGpid": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "主商品id"
+                    },
+                    "sortId": {
+                         "type": "integer",
+                         "format": "int32",
+                         "description": "排序(越大越前)"
+                    },
+                    "subGpid": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "附加商品id"
+                    },
+                    "vaild": {
+                         "type": "boolean",
+                         "format": "bool",
+                         "description": "是否有效"
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "AdminAdInfo": {
+               "type": "object",
+               "properties": {
+                    "attach": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "附加信息,type 对应关系(1:rgb(23,42,8),2:类型名字,3:空)"
+                    },
+                    "id": {
+                         "type": "integer",
+                         "format": "int64",
+                         "description": "id(id\u003e0:修改，id=0:添加)"
+                    },
+                    "img": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "展示图片"
+                    },
+                    "sortId": {
+                         "type": "integer",
+                         "format": "int32",
+                         "description": "排序(越大越前)"
+                    },
+                    "type": {
+                         "type": "integer",
+                         "format": "int32",
+                         "description": "类型(1:轮播图广告，2:类型广告，3:主销广告)"
+                    },
+                    "url": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "页面跳转 (页内跳转)"
+                    },
+                    "vaild": {
+                         "type": "boolean",
+                         "format": "bool",
+                         "description": "是否有效"
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "AdminCouponInfo": {
+               "type": "object",
+               "properties": {
+                    "couponType": {
+                         "type": "integer",
+                         "format": "int32",
+                         "description": "优惠券类型(1:全场，2:单个商品)"
+                    },
+                    "denom": {
+                         "type": "integer",
+                         "format": "int64",
+                         "description": "面额"
+                    },
+                    "describle": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "优惠券描述"
+                    },
+                    "gpid": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "商品优惠券商品id"
+                    },
+                    "greatMoney": {
+                         "type": "integer",
+                         "format": "int32",
+                         "description": "满多少可用"
+                    },
+                    "groupName": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "分组名"
+                    },
+                    "id": {
+                         "type": "integer",
+                         "format": "int64",
+                         "description": "coupon id"
+                    },
+                    "title": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "优惠券名字"
+                    },
+                    "vaild": {
+                         "type": "boolean",
+                         "format": "bool",
+                         "description": "是否有效"
+                    },
+                    "validity": {
+                         "type": "integer",
+                         "format": "int32",
+                         "description": "有效截止日期"
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "AfterMsgReq": {
+               "type": "object",
+               "properties": {
+                    "billId": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "账单id"
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "ChangeCardReq": {
+               "type": "object",
+               "properties": {
+                    "id": {
+                         "type": "integer",
+                         "format": "int64",
+                         "description": "id"
+                    },
+                    "number": {
+                         "type": "integer",
+                         "format": "int64",
+                         "description": "商品数量 (0:删除)"
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "DealOrderReq": {
+               "type": "object",
+               "properties": {
+                    "billId": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "账单id"
+                    },
+                    "contact": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "联系方式"
+                    },
+                    "imgs": {
+                         "type": "object",
+                         "format": "array",
+                         "description": "售后图片"
+                    },
+                    "remak": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "备注"
+                    },
+                    "type": {
+                         "type": "integer",
+                         "format": "int32",
+                         "description": "操作：-1：取消，1：申请售后，2:删除订单,3:意见反馈"
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "Empty": {
+               "type": "object",
+               "properties": {},
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "FavoriteReq": {
+               "type": "object",
+               "properties": {
+                    "gpid": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "商品id"
+                    },
+                    "isFavorite": {
+                         "type": "boolean",
+                         "format": "bool",
+                         "description": "是否收藏"
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "GetAddressReq": {
+               "type": "object",
+               "properties": {
+                    "isDefault": {
+                         "type": "boolean",
+                         "format": "bool",
+                         "description": "1:获取默认地址"
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "GetAdminAdInfo": {
+               "type": "object",
+               "properties": {
+                    "adList": {
+                         "format": "",
+                         "description": "",
+                         "$ref": "#/definitions/AdminAdInfo"
+                    },
+                    "groupList": {
+                         "format": "",
+                         "description": "",
+                         "$ref": "#/definitions/AdminAdGroupInfo"
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "GetAdminCouponInfo": {
+               "type": "object",
+               "properties": {
+                    "couponList": {
+                         "format": "",
+                         "description": "",
+                         "$ref": "#/definitions/AdminCouponInfo"
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "GetCartListReq": {
+               "type": "object",
+               "properties": {},
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "GetMyCouponReq": {
+               "type": "object",
+               "properties": {},
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "GetMyOrdersConfigReq": {
+               "type": "object",
+               "properties": {
+                    "isAdmin": {
+                         "type": "boolean",
+                         "format": "bool",
+                         "description": "是否用户端"
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "GetMyOrdersReq": {
+               "type": "object",
+               "properties": {
+                    "pageNumber": {
+                         "type": "integer",
+                         "format": "int32",
+                         "description": "当前页数"
+                    },
+                    "search": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "搜索内容"
+                    },
+                    "status": {
+                         "type": "integer",
+                         "format": "int32",
+                         "description": "支付状态(-1:已退款,1:待支付,2:已支付,3:已取消)"
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "GetOrdertrackInfoReq": {
+               "type": "object",
+               "properties": {
+                    "billId": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "订单号"
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "GetProductByTypeReq": {
+               "type": "object",
+               "properties": {
+                    "pageNumber": {
+                         "type": "integer",
+                         "format": "int32",
+                         "description": "当前页数"
+                    },
+                    "typeId": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "类型"
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "GetProductDetailsReq": {
+               "type": "object",
+               "properties": {
+                    "gpid": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "商品gpid"
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "GetProductListReq": {
+               "type": "object",
+               "properties": {
+                    "gpid": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "商品gpid (为空则获取列表)"
+                    },
+                    "index": {
+                         "type": "integer",
+                         "format": "int32",
+                         "description": "取第几页(默认0)"
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "GetPromotionCouponReq": {
+               "type": "object",
+               "properties": {},
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "GetQrcodeReq": {
+               "type": "object",
+               "properties": {
+                    "page": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "小程序页面头部"
+                    },
+                    "scene": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "附带参数"
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "GetUserInfoReq": {
+               "type": "object",
+               "properties": {},
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "GoGetCouponReq": {
+               "type": "object",
+               "properties": {
+                    "ids": {
+                         "type": "object",
+                         "format": "array",
+                         "description": ""
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "LinkUserReq": {
+               "type": "object",
+               "properties": {
+                    "openId": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "要关联的用户id"
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "LoginReq": {
+               "type": "object",
+               "properties": {
+                    "password": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "密码(用户输入的md5值,大写)"
+                    },
+                    "username": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "用户名"
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "OauthReq": {
+               "type": "object",
+               "properties": {
+                    "jscode": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "微信端jscode"
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "PContext": {
+               "type": "object",
+               "properties": {
+                    "context": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "内容"
+                    },
+                    "type": {
+                         "type": "integer",
+                         "format": "int",
+                         "description": "类型，1:文字，2:图片，3：视频"
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "PayReq": {
+               "type": "object",
+               "properties": {
+                    "billId": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "账单id"
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "PlaceOrderReq": {
+               "type": "object",
+               "properties": {
+                    "addrId": {
+                         "type": "integer",
+                         "format": "int64",
+                         "description": "地址id"
+                    },
+                    "buyType": {
+                         "type": "integer",
+                         "format": "int32",
+                         "description": "购买类型:1,来自直接购买，2:来自购物车"
+                    },
+                    "couponId": {
+                         "type": "integer",
+                         "format": "int64",
+                         "description": "优惠券id"
+                    },
+                    "desc": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "备注"
+                    },
+                    "ids": {
+                         "type": "object",
+                         "format": "array",
+                         "description": "购买列表"
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "ReckonFeeReq": {
+               "type": "object",
+               "properties": {
+                    "addrId": {
+                         "type": "integer",
+                         "format": "int64",
+                         "description": "地址id"
+                    },
+                    "buyType": {
+                         "type": "integer",
+                         "format": "int32",
+                         "description": "购买类型:1,来自直接购买，2:来自购物车"
+                    },
+                    "couponId": {
+                         "type": "integer",
+                         "format": "int64",
+                         "description": "优惠券id"
+                    },
+                    "ids": {
+                         "type": "object",
+                         "format": "array",
+                         "description": "购买列表"
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "RefreshReq": {
+               "type": "object",
+               "properties": {
+                    "refresh_token": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "token"
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "RefundPayReq": {
+               "type": "object",
+               "properties": {
+                    "billId": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "账单id"
+                    },
+                    "refundFee": {
+                         "type": "integer",
+                         "format": "int64",
+                         "description": "退款金额"
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "SkuInfo": {
+               "type": "object",
+               "properties": {
+                    "premium": {
+                         "type": "integer",
+                         "format": "int64",
+                         "description": "溢价值"
+                    },
+                    "tag_name": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "标签名字"
+                    },
+                    "type_name": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "标签类型"
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "UpdateSelectReq": {
+               "type": "object",
+               "properties": {
+                    "gpid": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "商品gpid"
+                    },
+                    "isSelect": {
+                         "type": "boolean",
+                         "format": "bool",
+                         "description": "是否推荐"
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "UpsetSkuPriceReq": {
+               "type": "object",
+               "properties": {
+                    "distAmount": {
+                         "type": "integer",
+                         "format": "int64",
+                         "description": "分享收益"
+                    },
+                    "gpid": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "商品gpid,(更新单个sku价格，gpid可以为空)"
+                    },
+                    "id": {
+                         "type": "integer",
+                         "format": "int64",
+                         "description": "用于更新单价及分享收益信息,0:表示没有sku属性时"
+                    },
+                    "premium": {
+                         "type": "integer",
+                         "format": "int64",
+                         "description": "商品单价"
+                    },
+                    "skuList": {
+                         "type": "object",
+                         "format": "array",
+                         "description": "属性列表"
+                    },
+                    "tag": {
+                         "type": "integer",
+                         "format": "int32",
+                         "description": "0:添加，1:更新，-1：删除(只允许删除sku price)"
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          },
+          "WxUserinfo": {
+               "type": "object",
+               "properties": {
+                    "avatarUrl": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "用户头像，最后一个数值代表正方形头像大小（有0、46、64、96、132数值可选，0代表640*640正方形头像），用户没有头像时该项为空。若用户更换头像，原有头像URL将失效。"
+                    },
+                    "city": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "用户所在城市"
+                    },
+                    "country": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "用户所在国家"
+                    },
+                    "gender": {
+                         "type": "integer",
+                         "format": "int",
+                         "description": "用户的性别，值为1时是男性，值为2时是女性，值为0时是未知"
+                    },
+                    "language": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "用户的语言，简体中文为zh_CN"
+                    },
+                    "nickName": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "用户昵称"
+                    },
+                    "province": {
+                         "type": "string",
+                         "format": "string",
+                         "description": "用户所在省份"
+                    }
+               },
+               "xml": {
+                    "name": "",
+                    "wrapped": false
+               }
+          }
+     },
+     "externalDocs": {
+          "description": "Find out more about Swagger",
+          "url": "https://github.com/xxjwxc/public"
+     }
+}

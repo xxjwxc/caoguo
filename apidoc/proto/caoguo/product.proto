@@ -1,0 +1,671 @@
+syntax = "proto3"; // 指定proto版本
+
+package caoguo;     // 指定包名
+import "common/common_public.proto";
+
+ option go_package = "rpc/caoguo"; // 指定路径
+
+// extend google.protobuf.FieldOptions {
+//     string default_string = 50000;
+//     int32 default_int = 50001;
+// }
+
+// 微信相关服务
+service ProductServer {
+    // Oauth 添加一个产品(可能更新)
+    rpc ReplaceProduct(AddReq) returns (common.ResultResp) {}
+}
+
+
+// AddReq 添加请求格式
+message AddReq {
+	string Name = 1; // 商品名
+	string gType=2; // 商品类型
+	int64 price   = 3;// 商品价格(分)
+	int64 qty = 4;                     // 商品数量
+	repeated PContext contexts =5;  // 商品详情
+	repeated string Image = 6;                   // 轮播图(图片，或者视频都可以)
+	string icon =7;                     // 商品图标
+}
+
+// PContext 商品内容字段
+message PContext {
+	int32 type = 1;// 类型，1:文字，2:图片，3：视频
+	string context  =2; // 内容
+}
+
+// GetAdResp 获取ad广告内容
+message GetAdResp {
+	repeated AdInfo rotationList = 1;// 广告轮播图信息
+	repeated AdInfo typeList = 2;// 广告页类型信息
+	AdInfo masterInfo = 3;// 主销广告
+} 
+
+// AdInfo 广告页信息信息
+message AdInfo {
+	string url = 1;// 页面跳转
+	string img = 2;// 卡片展示图片
+	int32 sortId = 3;// 排序(越大越前)
+	string attach = 4;// 附加
+}
+
+// BoutiqueGroupResp 团购列表
+message BoutiqueGroupResp {
+	repeated BoutiqueGroupInfo groups = 1;// 团购值
+	repeated SampleProductInfo likes = 2; // 推荐列表
+}
+
+
+
+// BoutiqueGroupInfo 精品商品团购列表
+message BoutiqueGroupInfo{
+	SampleProductInfo mainProduct = 1;// 主推荐
+	SampleProductInfo subProduct = 2;// 附加推荐
+}
+
+// SampleProductInfo 简单商品信息
+message SampleProductInfo{
+	string gpid = 1;// 商品gpid
+	string name = 2;// 商品名
+	int64 price = 3;// 商品价格
+	int64 originalPrice = 4;// 商品原始价格
+	int64 sales = 5;// 商品销量
+	repeated string img = 6;// 商品轮播图
+	string icon = 7; // 商品图标
+	int64 percent = 8;// 团购进度条
+}
+
+message GetProductDetailsReq{
+	string gpid = 1;// 商品gpid
+}
+
+message GetProductDetailsRsp{
+	ProductInfo info = 1;// 商品信息
+}
+
+// ProductInfo 商品信息
+message ProductInfo{
+	string gpid = 1;// 商品gpid
+	repeated string img = 2;// 商品轮播图
+	string name = 3;// 商品名
+	int64 price = 4;// 商品价格
+	int64 originalPrice = 5;// 商品原始价格
+	int32 couponPct  = 6;// 折扣占比
+	int64 sales = 7;// 商品销量
+	string stock = 8;// 库存
+	string views = 9;// 浏览量
+	string shareTit = 10;// 分享提示
+	ProducktSkuInfo sku =11;// 商品分类	
+	ProducktSkuPriceInfo skuPrice =12;// 商品溢价明细	
+	string couponName = 13;// 优惠券
+	repeated string conList = 14;// 促销活动信息
+	repeated string bzList = 15 ;// 服务
+	repeated string imgDetail = 16;// 图文详情
+	repeated string vdDetail = 17;// 视频详情
+	string richText = 18;// 富文本信息
+	string icon = 19; // 商品图标
+	bool isFavorite = 20;// 是否收藏
+}
+
+message ProducktSkuPriceInfo {
+	string gpid = 1;// 商品gpid
+	repeated SkuPriceGroup list = 2;// sku信息列表
+}
+
+// 商品价格明细
+message SkuPriceGroup {
+	int64 id = 1;// id(用于更新单价及分享收益信息)
+	string skuList = 2;// 属性列表(逗号小到大排序)
+	int64  premium = 3;// 商品单价
+	int64 distAmount = 4;// 分享收益
+}
+
+// ProducktSkuInfo 产品列表
+message ProducktSkuInfo{
+	string gpid = 1;// 商品gpid
+	repeated SkuGroup groups = 2;// sku信息列表
+}
+
+// SkuGroup sku grup信息
+message SkuGroup {
+	string typeName = 2;// 类型名字
+	repeated SkuInfo Items = 3;// sku信息列表
+}
+
+// SkuInfo sku信息
+message SkuInfo{
+	int64 id = 1;// id
+	string typeName = 2;// 类型名字
+	string tagName = 3;// 标签名称
+	// int64 premium = 4;// 溢价值
+}
+
+// FavoriteReq 收藏&取消收藏
+message FavoriteReq{
+	string gpid = 1;// 商品id
+	bool isFavorite = 2;// 是否收藏
+}
+
+// GetFavoriteResp 获取收藏列表
+message GetFavoriteResp{
+	repeated SampleProductInfo items = 1;// 收藏列表
+}
+
+
+// AddCartReq 添加购物车
+message AddCartReq{
+	string gpid = 1;// 商品id
+	int32 number = 2;// 数量
+	repeated int32 skuList = 3;// sku信息
+}
+
+// GetCartListReq 获取购物车
+message GetCartListReq{
+}
+
+// GetCartListReq 获取购物车
+message GetCartListResp{
+	repeated CartInfo items =1;// 购物车列表
+}
+
+// CartInfo 购物车信息
+message CartInfo {
+	int64 id= 1;//id
+	string icon = 2;// icon
+	string skuVal = 3;// sku信息
+	int64 stock = 4;// 库存
+	string name = 5;// 商品名字
+	int64 price= 6;// 商品价格
+	int64 number= 7;// 商品数量
+	int64 originalPrice = 8;// 商品原始价格
+}
+
+// ChangeCardReq 修改数量 or 删除购物车
+message ChangeCardReq{
+	int64 id= 1;//id
+	int64 number= 7;// 商品数量 (0:删除)
+}
+
+// AddToBuyTmpCartReq 直接购买添加到购物车里
+message AddToBuyTmpCartReq{
+	string gpid = 1;// 商品id
+	int32 number = 2;// 数量(目前默认为1)
+	repeated int32 skuList = 3;// sku信息
+}
+
+// AddToBuyTmpCartResp 添加到虚拟购物车时返回id
+message AddToBuyTmpCartResp{
+	int64 id = 1;
+}
+
+// AddAddressReq 添加或者修改地址
+message AddAddressReq{
+	AddressInfo addr = 1;// 地址
+	int32 op = 2;// 1:添加，2:修改，3:删除
+}
+
+// AddressInfo 地址信息
+message AddressInfo{
+	int64 id = 1;
+	string name=2;// 名字
+	string mobile = 3;// 手机号
+	string addressName = 4;// 地址名称
+	string address = 5;// 详细地址
+	string area = 6;// 单元门牌号
+	bool default = 7;// 是否默认
+}
+
+// GetAddressReq 获取地址
+message GetAddressReq{
+	bool isDefault = 1;// 1:获取默认地址
+}
+
+// GetAddressResp 返回地址信息
+message GetAddressResp{
+	repeated AddressInfo addrs = 1;// 地址
+}
+
+// 计算费用
+message ReckonFeeReq {
+	int32 buyType = 1;// 购买类型:1,来自直接购买，2:来自购物车
+	repeated int64 ids = 2;// 购买列表
+	int64 addrId = 3;// 地址id
+	int64 couponId = 4;// 优惠券id
+	//string ramark = 5;// 备注
+}
+// 计算费用
+message ReckonFeeResp {
+	repeated OrderProductInfo orderInfo = 1;// 订单信息
+	repeated FeeDetail feeDetails = 2;// 费用明细
+	repeated CouponInfo couponList  = 3;// 优惠券列表
+	string couponDetail = 4;// 优惠券内容
+	int64 couponId = 5;// 优惠券id
+	string promotionDetail = 6;// 促销内容
+	string vendorName = 7;// 供应商名称
+	string vendorImg =8;// 供应商图标
+	int64 totalFee = 9;//总金额
+	int64 shipmentFee =10;// 运输费
+	int64 couponFee = 11;// 优惠金额
+}
+
+// FeeDetail 费用明细
+message FeeDetail{
+	string key = 1;// 名字
+	string value = 2;// 值
+	string color = 3;// 颜色
+}
+
+message OrderProductInfo{
+	string gpid = 1;// 商品gpid
+	string name = 2;// 商品名
+	int64 price = 3;// 商品价格
+	string icon = 5; // 商品图标
+	string skuVal = 6;// sku描述
+	string skuList = 7;// sku信息
+	int64 number = 8;// 购买数量
+	int64 distAmount = 9;// 分销金额
+}
+
+// GetPromotionCoupon 获取促销优惠券
+message GetPromotionCouponReq{
+
+}
+
+// GetPromotionCoupon 获取促销优惠券
+message GetPromotionCouponResp{
+	repeated CouponGroupList items = 1;// 优惠券列表
+	int64 totalFee =2;//  总费用
+	repeated int64 ids = 3;
+}
+
+// CouponGroupList
+message CouponGroupList{
+	string key = 1;// groupname
+	repeated CouponInfo items = 2;// 优惠券列表
+}
+
+// CouponInfo 优惠券信息
+message CouponInfo {
+	int64 id = 1;// coupon id
+	string groupName = 2; // 分组名
+	string title = 3; // 优惠券名字
+	string validity=4;   // 有效截止日期
+	string gpid= 5; // 商品优惠券商品id
+	int64 denom=6;    // 面额
+	int32 couponType =7;    // 优惠券类型(1:全场，2:单个商品)
+	string greatMoney =8; // 满多少可用
+	string describle  =9; // 优惠券描述
+	int32 status = 10;// 0：默认，1:未使用(有效),2:已使用,-1:已过期
+	int32 type = 11;// 优惠券类型，1:促销优惠券，2：用户已领取的优惠券
+	bool vaild =12;// 是否有效
+}
+
+// GoGetCouponReq 领取优惠券
+message GoGetCouponReq{
+	repeated int64 ids = 1;	
+}
+
+// GetMyCouponReq 获取我的优惠券
+message GetMyCouponReq{
+
+}
+
+// GetMyCouponResp 获取我的优惠券返回
+message GetMyCouponResp{
+	repeated CouponGroupList items = 1;// 优惠券列表
+}
+
+// PlaceOrderReq 下单
+message PlaceOrderReq{
+	int32 buyType = 1;// 购买类型:1,来自直接购买，2:来自购物车
+	repeated int64 ids = 2;// 购买列表
+	int64 addrId = 3;// 地址id
+	int64 couponId = 4;// 优惠券id
+	string desc = 5;// 备注
+}
+
+// PayResp 下单
+message PayResp{
+	bool status = 1;// 状态 1:成功，-1:失败
+	string billId =2;// 账单id
+	map<string, string> info = 3;// 支付相关信息
+}
+
+// pay 支付
+message PayReq {
+	string billId =1;// 账单id
+}
+
+// GetMyOrdersReq 获取订单列表
+message GetMyOrdersReq {
+	int32 status = 1;// 支付状态(-1:已退款,1:待支付,2:已支付,3:已取消)
+	int32 pageNumber = 2;// 当前页数
+	string search = 3;// 搜索内容
+}
+
+// GetMyOrdersResp 获取订单列表
+message GetMyOrdersResp {
+	int32 totalPages = 1;// 总页数
+	int32 pageNumber = 2;// 当前页数
+	repeated BillOrderInfo items =3;// 账单列表
+}
+
+message GetMyOrdersConfigReq{
+	bool isAdmin = 1;// 是否用户端
+}
+
+message GetMyOrdersConfigResp{
+	repeated NavList navList = 1; // 类型列表
+}
+
+// NavList 类型列表 
+message NavList {
+	int32 state = 1;// 支付状态(0:全部,-1:已退款,1:待支付,2:已支付,3:已取消)
+	string text  = 2;// 内容
+	string loadingType = 3;// 'more',
+	// repeated string orderList = 4;// 占位符
+}
+
+// BillOrderInfo 订单信息
+message BillOrderInfo{
+	int32 status = 1;// 支付状态(-1:已退款,1:待支付,2:已支付,3:已取消)
+	string billId =2;// 账单id
+	int64 totalFee =3;//  总费用
+	string time = 4;// 时间
+	string stateTip = 5;// 状态描述
+	string stateTipColor = 6;// 状态颜色
+	int64  number = 7;// 数量
+	int64 checkStatus = 8;// 点击状态
+	string couponTitle = 9;// 优惠券描述
+	repeated ShipmentInfo shipmentInfo = 10;// 订单快递单号
+	repeated OrderProductInfo items = 11;// 订单信息
+	AddressInfo addr = 12;// 配送地址
+}
+
+message ShipmentInfo{
+	string shipmentId = 1;// 快递单号
+	string shipmentName  = 2;// 快递名
+}
+
+// DealOrderReq 处理订单 
+message DealOrderReq{
+	string billId =1;// 账单id
+	int32 type = 2;// 操作：-1：取消，1：申请售后，2:删除订单,3:意见反馈
+	string contact = 3;// 联系方式
+	string remak = 4;// 备注
+	repeated string imgs = 5;// 售后图片
+}
+
+// DealOrderReq 处理订单结果
+// message DealOrderResp{
+// 	bool status = 1;//状态
+// }
+
+message RefundPayReq {
+	string billId =1;// 账单id
+	int64 refundFee = 2;// 退款金额
+}
+
+message RefundPayResp {
+	bool status =1;// 是否退款成功
+}
+
+// GetUserInfoReq 获取用户信息
+message GetUserInfoReq {
+	
+}
+
+// GetUserInfoResp 获取用户信息
+message GetUserInfoResp {
+	bool isVip = 1;// 是否是会员
+	int64 balance = 2;// 余额
+	int64 couponNum = 3;// 优惠券数量
+	int64 points = 4;// 用户积分
+	repeated History historys = 5;// 浏览历史
+}
+
+// History 历史数据
+message History {
+	string gpid = 1;   
+	string icon = 2;// 用户图标
+}
+
+// GetProductByTypeReq 通过类型获取商品列表
+message GetProductByTypeReq {
+	string typeId = 1;// 类型
+	int32 pageNumber = 2;// 当前页数
+}
+
+// GetProductByTypeResp 通过类型获取商品列表
+message GetProductByTypeResp {
+	string typeId = 1;// 类型
+	int32 pageNumber = 2;// 当前页数
+	repeated SampleProductInfo items = 3; // 当前列表
+}
+
+// GetOrdertrackInfoReq 获取订单物流信息
+message GetOrdertrackInfoReq {
+	string billId = 1;// 订单号
+}
+
+// GetOrdertrackInfoResp 获取订单物流信息
+message GetOrdertrackInfoResp {
+	string billId = 1;// 订单id
+	int32 deliveryStatus = 2;// 快递状态 1已签收 2配送中
+	string postName = 3;// 快递名称
+	string logo = 4;// 快递logo
+	string expPhone = 5;// 快递电话
+	string postNo = 6;// 快递单号
+	string addr = 7;// 收货地址
+	repeated Logistics list = 8;// 物流信息
+}
+
+// Logistics 物流信息
+message Logistics {
+	string time = 1;// 时间
+	repeated string timeArr = 2;// 时间分割(['2020-04-12', '13:00:57'])
+	string context = 3;// 描述信息
+}
+
+message AddBillShipmentReq{
+	string billId = 1;// 订单号
+	string shipmentId =2;// 快递单号
+	string postKey = 3;// 快递id
+}
+
+enum BillStatus {
+	Default = 0;
+	// 支付状态(-1:已退款,1:待支付,2:已支付,待发货,3:已取消,4:待收货,5:已完成，6:售后待评价)
+	Refunded = -1; // 已退款
+	Paying = 1;// 待支付
+	Paid = 2;// 已支付,待发货
+	Cancelled = 3;// 已取消
+	Received = 4;// 已发货，待收货
+	Completed = 5;// 已完成
+	AfterSale = 6;// 售后待评价
+}
+
+// GetShipmentPostResp 获取快递列表
+message GetShipmentPostResp{
+	repeated PostInfo items = 1;
+}
+
+message PostInfo{
+	string name = 1;// 快递名称
+	string id = 2;// 快递id
+	string icon = 3;// 快递logo地址
+	string expPhone = 4;// 快递电话
+}
+
+// AfterMsgReq 售后回复请求
+message AfterMsgReq{
+	string billId =1;// 账单id
+}
+
+// AfterMsgResp 售后回复请求
+message AfterMsgResp{
+	string billId =1;// 账单id
+	repeated AfterMsg items = 2;// 搜后回复信息
+}
+
+message AfterMsg {
+	string contact = 1;// 联系方式
+	string remak = 2;// 备注
+	string time = 3;
+	repeated string imgs = 4;// 售后图片
+}
+
+// LinkUserReq 关联用户
+message LinkUserReq {
+	string openId = 1;// 要关联的用户id
+}
+
+// 获取可分销列表
+message GetDistListResp {
+	DistDoc info = 1;// 详情
+	repeated DistProductInfo items = 2;// 列表
+}
+
+// DistDoc 分销说明详细信息
+message DistDoc{
+	bool isVip = 1;// 是否vip
+	string detail = 2;// 文字详情
+	repeated string imgs = 3;// 图片详情
+}
+
+// DistProductInfo 分销商品信息
+message DistProductInfo{
+	string gpid = 1;// 商品gpid
+	string name = 2;// 商品名
+	int64 price = 3;// 商品价格
+	int64 originalPrice = 4;// 商品原始价格
+	string icon = 5; // 商品图标
+	repeated string shareAmounts = 6;// 分享受益金 
+}
+
+message RequestDistResp{
+	
+}
+
+
+
+/////////////////////////////////////////////////////
+//// admin
+/////////////////////////////////////////////////////
+
+// Coupon 优惠券信息
+message Coupon {
+	int64 id = 1;// coupon id
+	string groupName = 2; // 分组名
+	string title = 3; // 优惠券名字
+	int32 validity=4;   // 有效截止日期
+	string gpid= 5; // 商品优惠券商品id
+	int64 denom=6;    // 面额
+	int32 couponType =7;    // 优惠券类型(1:全场，2:单个商品)
+	int32 greatMoney =8; // 满多少可用
+	string describle  =9; // 优惠券描述
+	int32 status = 10;// 0：默认，1:未使用(有效),2:已使用,-1:已过期
+	int32 type = 11;// 优惠券类型，1:促销优惠券，2：用户已领取的优惠券
+	bool vaild =12;// 是否有效
+}
+
+// Product 商品信息
+message Product{
+	string gpid = 1;// 商品gpid
+	string name = 2;// 商品名
+	string gtid = 3; // 商品分类
+	int64 price = 4;// 商品价格(分)
+	int64 originalPrice = 5;// 商品原始价格(分)
+	int64 distAmount =6; // 分享收益（-----todo:更新）
+	string PlatformID = 7;// 商铺客户id
+	int64 qty = 8;          // 数量(库存)
+	int64 shipmentFee   = 9; // 运费(分)(------todo:更新)
+	repeated string imgDetail = 10;// 图文详情
+	repeated string videoDetail = 11;// 视频详情
+	bool vaild = 12;// 是否有效
+	string updatedAt = 13;// 更新时间
+	string createdAt = 14;// 创建时间
+	// 商品附加信息
+	int64 sales = 15;//  已购买数量(销量)
+	repeated string img = 16;// 商品轮播图
+	string icon = 17; // 商品图标
+	string service = 18; // 商品服务
+	string shareTit = 19;// 分享提示
+	bool isSelect = 20;// 是否精选(推荐)
+
+	repeated SkuInfo skus = 21;// 商品属性
+	repeated SkuPriceGroup skuPrice =22;// 商品价格明细
+	repeated Coupon couponList = 23;// 商品优惠价
+}
+
+// GetProductListReq admin 获取商品列表
+message GetProductListReq{
+	string gpid = 1;// 商品gpid (为空则获取列表)
+	int32 index = 2;// 取第几页(默认0)
+}
+
+// GetProductListResp admin 获取商品列表返回值
+message GetProductListResp{
+	repeated Product  productList = 1;// 商品列表
+	common.Page page = 2;// 总共
+}
+
+// UpsetSkuPriceReq admin 更新或设置商品价格
+message UpsetSkuPriceReq{
+	int64 id = 1;// 用于更新单价及分享收益信息,0:表示没有sku属性时
+	string gpid = 2;// 商品gpid,(更新单个sku价格，gpid可以为空)
+	int64  premium = 3;// 商品单价
+	int64 distAmount = 4;// 分享收益
+	repeated int32 skuList = 5;// 属性列表
+	int32 tag = 6;// 0:添加，1:更新，-1：删除(只允许删除sku price)
+}
+
+//////////// ad 广告 ////////////////////////////
+
+// AdminAdInfo 广告页信息信息
+message AdminAdInfo {
+	int64 id = 1;// id(id>0:修改，id=0:添加)
+	string url = 2;// 页面跳转 (页内跳转)
+	string img = 3;// 展示图片
+	int32 sortId = 4;// 排序(越大越前)
+	int32 type = 5;// 类型(1:轮播图广告，2:类型广告，3:主销广告)
+	string attach = 6;// 附加信息,type 对应关系(1:rgb(23,42,8),2:类型名字,3:空)
+	bool vaild = 7;// 是否有效
+}
+
+// AdminAdGroupInfo 首页精选列表
+message AdminAdGroupInfo {
+	int64 id = 1;// id(id>0:修改，id=0:添加)
+	string mainGpid = 2;// 主商品id
+	string subGpid = 3;// 附加商品id
+	int32 sortId = 4;// 排序(越大越前)
+	bool vaild = 7;// 是否有效
+}
+
+// GetAdminAdInfoResp admin 获取相关广告信息(可更新或者添加)
+message GetAdminAdInfo {
+	repeated AdminAdInfo adList = 1;// 广告相关信息
+	repeated AdminAdGroupInfo groupList = 2;// 首页精选列表
+}
+
+
+//////////////////////// admin 优惠券 ////////////////////////////////
+
+// AdminCouponInfo 优惠券返回信息
+message AdminCouponInfo{
+	int64 id = 1;// coupon id
+	string groupName = 2; // 分组名
+	string title = 3; // 优惠券名字
+	int32 validity=4;   // 有效截止日期
+	string gpid= 5; // 商品优惠券商品id
+	int64 denom=6;    // 面额
+	int32 couponType =7;    // 优惠券类型(1:全场，2:单个商品)
+	int32 greatMoney =8; // 满多少可用
+	string describle  =9; // 优惠券描述
+	bool vaild =10;// 是否有效
+}
+
+// GetAdminCouponInfo admin 优惠券相关信息(获取,更新或者添加)
+message GetAdminCouponInfo{
+	repeated AdminCouponInfo couponList = 1;// 优惠券列表
+}

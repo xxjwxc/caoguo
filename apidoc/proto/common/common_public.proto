@@ -1,0 +1,23 @@
+syntax = "proto3"; // 指定proto版本
+
+package common;     // 指定包名
+
+// import "google/protobuf/descriptor.proto";
+
+// option go_package = "common;common"; // 指定路径
+option go_package = "rpc/common";
+
+message ResultResp {
+	bool result = 1;
+	string msg = 2;
+}
+
+// Empty 空
+message Empty {}
+
+// Page 分页
+message Page{
+	int32 size = 1;// 每页尺寸
+	int32 index = 2;// 第几页
+	int32 limit = 3;// 总页数
+}
