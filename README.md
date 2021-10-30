@@ -16,6 +16,14 @@
 - 安装cmake工具
 - 安装服务器
 ```
+git clone https://URL_OF_caoguo_REPO
+
+cd caoguo
+git submodule update --init --recursive
+
+cd server
+go mod download
+
 make windows
 or
 make linux

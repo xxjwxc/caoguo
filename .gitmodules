@@ -1,0 +1,9 @@
+[submodule "ginrpc"]
+	path = ginrpc
+	url = https://github.com/xxjwxc/ginrpc
+[submodule "public"]
+	path = public
+	url = https://github.com/xxjwxc/public
+[submodule "goplugins"]
+	path = goplugins
+	url = https://github.com/gmsec/goplugins

@@ -17,8 +17,8 @@ require (
 	gorm.io/gorm v1.20.2
 )
 
-replace github.com/xxjwxc/ginrpc => ../../ginrpc
+replace github.com/xxjwxc/ginrpc => ../ginrpc
 
-replace github.com/xxjwxc/public => ../../public
+replace github.com/xxjwxc/public => ../public
 
-replace github.com/gmsec/goplugins => ../../goplugins
+replace github.com/gmsec/goplugins => ../goplugins
