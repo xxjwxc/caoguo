@@ -67,7 +67,7 @@
                               "description": "admin 获取优惠券列表",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/Empty"
+                                   "$ref": "#/definitions/GetAdminCouponInfo"
                               }
                          }
                     ],
@@ -106,7 +106,7 @@
                               "description": "获取我的优惠券",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/Empty"
+                                   "$ref": "#/definitions/GetAdminCouponInfo"
                               }
                          }
                     ],
@@ -145,7 +145,7 @@
                               "description": "获取促销优惠券",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/Empty"
+                                   "$ref": "#/definitions/GetAdminCouponInfo"
                               }
                          }
                     ],
@@ -184,7 +184,7 @@
                               "description": "一键领取优惠券",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/Empty"
+                                   "$ref": "#/definitions/GetAdminCouponInfo"
                               }
                          }
                     ],
@@ -223,7 +223,7 @@
                               "description": "admin 更新/添加 优惠券列表",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/Empty"
+                                   "$ref": "#/definitions/GetAdminCouponInfo"
                               }
                          }
                     ],
@@ -262,7 +262,7 @@
                               "description": "获取可分销列表",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/Empty"
+                                   "$ref": "#/definitions/GetAdminCouponInfo"
                               }
                          }
                     ],
@@ -301,7 +301,7 @@
                               "description": "申请分销",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/Empty"
+                                   "$ref": "#/definitions/GetAdminCouponInfo"
                               }
                          }
                     ],
@@ -340,7 +340,7 @@
                               "description": "刷新token管理员",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/Empty"
+                                   "$ref": "#/definitions/GetAdminCouponInfo"
                               }
                          }
                     ],
@@ -379,7 +379,7 @@
                               "description": "登录",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/Empty"
+                                   "$ref": "#/definitions/GetAdminCouponInfo"
                               }
                          }
                     ],
@@ -418,7 +418,7 @@
                               "description": "订单添加运单号",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/Empty"
+                                   "$ref": "#/definitions/GetAdminCouponInfo"
                               }
                          }
                     ],
@@ -457,7 +457,7 @@
                               "description": "支付成功check一次",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/Empty"
+                                   "$ref": "#/definitions/GetAdminCouponInfo"
                               }
                          }
                     ],
@@ -496,7 +496,7 @@
                               "description": "账单/订单处理",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/Empty"
+                                   "$ref": "#/definitions/GetAdminCouponInfo"
                               }
                          }
                     ],
@@ -535,7 +535,7 @@
                               "description": "意见与反馈",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/Empty"
+                                   "$ref": "#/definitions/GetAdminCouponInfo"
                               }
                          }
                     ],
@@ -574,7 +574,7 @@
                               "description": "获取回复信息",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/Empty"
+                                   "$ref": "#/definitions/GetAdminCouponInfo"
                               }
                          }
                     ],
@@ -613,7 +613,7 @@
                               "description": "获取订单信息",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/Empty"
+                                   "$ref": "#/definitions/GetAdminCouponInfo"
                               }
                          }
                     ],
@@ -652,7 +652,7 @@
                               "description": "获取所有订单",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/Empty"
+                                   "$ref": "#/definitions/GetAdminCouponInfo"
                               }
                          }
                     ],
@@ -691,7 +691,7 @@
                               "description": "获取订单配置",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/Empty"
+                                   "$ref": "#/definitions/GetAdminCouponInfo"
                               }
                          }
                     ],
@@ -730,7 +730,7 @@
                               "description": "获取物流轨迹信息",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/Empty"
+                                   "$ref": "#/definitions/GetAdminCouponInfo"
                               }
                          }
                     ],
@@ -769,7 +769,7 @@
                               "description": "获取快递列表",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/Empty"
+                                   "$ref": "#/definitions/GetAdminCouponInfo"
                               }
                          }
                     ],
@@ -808,7 +808,7 @@
                               "description": "支付",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/Empty"
+                                   "$ref": "#/definitions/GetAdminCouponInfo"
                               }
                          }
                     ],
@@ -847,7 +847,7 @@
                               "description": "下单",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/Empty"
+                                   "$ref": "#/definitions/GetAdminCouponInfo"
                               }
                          }
                     ],
@@ -886,7 +886,7 @@
                               "description": "费用计算",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/Empty"
+                                   "$ref": "#/definitions/GetAdminCouponInfo"
                               }
                          }
                     ],
@@ -925,7 +925,7 @@
                               "description": "添加或者修改地址",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/Empty"
+                                   "$ref": "#/definitions/GetAdminCouponInfo"
                               }
                          }
                     ],
@@ -964,7 +964,7 @@
                               "description": "添加到直接购买虚拟购物车里面",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/Empty"
+                                   "$ref": "#/definitions/GetAdminCouponInfo"
                               }
                          }
                     ],
@@ -1003,7 +1003,7 @@
                               "description": "加入购物车",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/Empty"
+                                   "$ref": "#/definitions/GetAdminCouponInfo"
                               }
                          }
                     ],
@@ -1042,7 +1042,7 @@
                               "description": "改变",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/Empty"
+                                   "$ref": "#/definitions/GetAdminCouponInfo"
                               }
                          }
                     ],
@@ -1081,7 +1081,7 @@
                               "description": "收藏 or 取消收藏",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/Empty"
+                                   "$ref": "#/definitions/GetAdminCouponInfo"
                               }
                          }
                     ],
@@ -1120,7 +1120,7 @@
                               "description": "获取广告主信息列表(可能更新)",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/Empty"
+                                   "$ref": "#/definitions/GetAdminCouponInfo"
                               }
                          }
                     ],
@@ -1159,7 +1159,7 @@
                               "description": "获取地址",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/Empty"
+                                   "$ref": "#/definitions/GetAdminCouponInfo"
                               }
                          }
                     ],
@@ -1198,7 +1198,7 @@
                               "description": "admin 获取首页信息(轮播图广告，类型广告，主销广告,精选列表)",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/Empty"
+                                   "$ref": "#/definitions/GetAdminCouponInfo"
                               }
                          }
                     ],
@@ -1237,7 +1237,7 @@
                               "description": "获取团购列表",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/Empty"
+                                   "$ref": "#/definitions/GetAdminCouponInfo"
                               }
                          }
                     ],
@@ -1276,7 +1276,7 @@
                               "description": "获取购物车内容",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/Empty"
+                                   "$ref": "#/definitions/GetAdminCouponInfo"
                               }
                          }
                     ],
@@ -1315,7 +1315,7 @@
                               "description": "获取收藏列表",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/Empty"
+                                   "$ref": "#/definitions/GetAdminCouponInfo"
                               }
                          }
                     ],
@@ -1354,7 +1354,7 @@
                               "description": "通过商品类型获取商品列表",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/Empty"
+                                   "$ref": "#/definitions/GetAdminCouponInfo"
                               }
                          }
                     ],
@@ -1393,7 +1393,7 @@
                               "description": "获取订单详情",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/Empty"
+                                   "$ref": "#/definitions/GetAdminCouponInfo"
                               }
                          }
                     ],
@@ -1432,7 +1432,7 @@
                               "description": "admin 获取商品列表",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/Empty"
+                                   "$ref": "#/definitions/GetAdminCouponInfo"
                               }
                          }
                     ],
@@ -1471,7 +1471,7 @@
                               "description": "添加一个产品(可能更新)",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/Empty"
+                                   "$ref": "#/definitions/GetAdminCouponInfo"
                               }
                          }
                     ],
@@ -1510,7 +1510,7 @@
                               "description": "添加一个产品Sku(可能更新)",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/Empty"
+                                   "$ref": "#/definitions/GetAdminCouponInfo"
                               }
                          }
                     ],
@@ -1549,7 +1549,7 @@
                               "description": "修改商品推荐信息",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/Empty"
+                                   "$ref": "#/definitions/GetAdminCouponInfo"
                               }
                          }
                     ],
@@ -1588,7 +1588,7 @@
                               "description": "admin 更新首页信息(轮播图广告，类型广告，主销广告,精选列表)(id为0,添加，id\u003e0 删除)",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/Empty"
+                                   "$ref": "#/definitions/GetAdminCouponInfo"
                               }
                          }
                     ],
@@ -1627,7 +1627,7 @@
                               "description": "更新/设置产品sku价格",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/Empty"
+                                   "$ref": "#/definitions/GetAdminCouponInfo"
                               }
                          }
                     ],
@@ -1666,7 +1666,7 @@
                               "description": "上传文件 多个",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/Empty"
+                                   "$ref": "#/definitions/GetAdminCouponInfo"
                               }
                          }
                     ],
@@ -1705,7 +1705,7 @@
                               "description": "获取用户相关信息",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/Empty"
+                                   "$ref": "#/definitions/GetAdminCouponInfo"
                               }
                          }
                     ],
@@ -1744,7 +1744,7 @@
                               "description": "关联用户",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/Empty"
+                                   "$ref": "#/definitions/GetAdminCouponInfo"
                               }
                          }
                     ],
@@ -1783,7 +1783,7 @@
                               "description": "申请vip",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/Empty"
+                                   "$ref": "#/definitions/GetAdminCouponInfo"
                               }
                          }
                     ],
@@ -1822,7 +1822,7 @@
                               "description": "获取微信二维码",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/Empty"
+                                   "$ref": "#/definitions/GetAdminCouponInfo"
                               }
                          }
                     ],
@@ -1861,7 +1861,7 @@
                               "description": "微信授权获取登录信息",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/Empty"
+                                   "$ref": "#/definitions/GetAdminCouponInfo"
                               }
                          }
                     ],
@@ -1900,7 +1900,7 @@
                               "description": "退款",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/Empty"
+                                   "$ref": "#/definitions/GetAdminCouponInfo"
                               }
                          }
                     ],
@@ -1939,7 +1939,7 @@
                               "description": "更新用户信息",
                               "required": true,
                               "schema": {
-                                   "$ref": "#/definitions/Empty"
+                                   "$ref": "#/definitions/GetAdminCouponInfo"
                               }
                          }
                     ],

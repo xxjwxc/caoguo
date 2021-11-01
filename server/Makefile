@@ -27,3 +27,8 @@ gen:
 	#test -h rpc || ln -s ../rpc ./
 	go generate
 	./tools/gormt.exe -o internal/model
+master:
+	go get -u github.com/xxjwxc/public@master
+	go get -u github.com/xxjwxc/ginrpc@master
+	go get -u github.com/gmsec/micro@master
+	go get -u github.com/gmsec/goplugins@master

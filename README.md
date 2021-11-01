@@ -16,7 +16,7 @@
 - 安装cmake工具
 - 安装服务器
 ```
-git clone https://URL_OF_caoguo_REPO
+git clone git@github.com:xxjwxc/caoguo.git
 
 cd caoguo
 git submodule update --init --recursive
