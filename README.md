@@ -3,7 +3,7 @@
 ### 功能
 
 - 微信小程序电商平台
-- 后台开发语言golang  [gmsec](https://github.com/gmsec/gmsec)
+- 后台开发语言 Go  [gmsec](https://github.com/gmsec/gmsec)
 - gormt 嵌入，自动数据库代码生成 [gorm 自动构建(gormt)](https://github.com/xxjwxc/gormt)
 - 支持优惠券，物流系统
 - uniapp 小程序端
@@ -12,8 +12,8 @@
 
 ## 安装
 
-- 进入到server目录
-- 安装cmake工具
+- 进入到 server 目录
+- 安装 cmake 工具
 - 安装服务器
 ```
 git clone git@github.com:xxjwxc/caoguo.git
@@ -22,15 +22,9 @@ cd caoguo
 git submodule update --init --recursive
 
 cd server
-go mod download
-
-make windows
-or
-make linux
-or 
-make mac 
+make run
 ```
-- 客户端运行(hbuilder 直接导入 uniapp即可)
+- 客户端运行(hbuilder 直接导入 uniapp 即可)
   
 ## 部署运行
 
